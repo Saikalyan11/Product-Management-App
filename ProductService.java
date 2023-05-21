@@ -18,4 +18,17 @@ public class ProductService {
                 return p;
         return null;
     }
+
+    public List<Products> getProductswithText(String text) {
+        String str = text.toLowerCase();
+        List<Products> result = new ArrayList<>();
+        for (Products p : products) {
+            String name = p.getName().toLowerCase();
+            String type = p.getType().toLowerCase();
+            String place = p.getPlace().toLowerCase();
+            if (name.contains(str) || type.contains(str) || place.contains(str))
+                result.add(p);
+        }
+        return result;
+    }
 }
