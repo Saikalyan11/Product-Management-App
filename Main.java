@@ -25,6 +25,7 @@ public class Main {
         List<Products> prod = service.getProductswithText("Laptop");
         for (Products p1 : prod)
             System.out.println(p1);
+
     }
 
 }
